@@ -1,3 +1,6 @@
+  //Não roda o LocalHost!! Ajuda ae
+  //F12 dando erro na hora de rodar no navegador
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchTasks();
   });

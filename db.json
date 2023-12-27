@@ -1,19 +1,12 @@
 {
-    "tasks":[
+    "tasks": [
+        { "id": 1,
+        "nome": "acordar"
+    },
         {
-            "id": 1,
-            "tasks": "acordar"
-        }, {
             "id": 2,
-            "tasks": "acordarr"
-        },
-        {
-            "id": 3,
-            "tasks": "acordarrr"
-        },
-        {
-            "id": 4,
-            "tasks": "acordarrrr"
+            "nome": "dormir"
         }
+       
     ]
-}
+  }
