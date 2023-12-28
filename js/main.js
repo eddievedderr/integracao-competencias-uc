@@ -19,12 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tasks.forEach(task => {
       const li = document.createElement('li');
       li.textContent = task.title;
-      li.addEventListener('click', () => deleteTask(task.id));
+      li.addEventListener('click',  () => deleteTask(task.id));
       taskList.appendChild(li);
     });
   }
   
-  function addTask() {
+  document.getElementById ("add-task-button").addEventListener ("click", () => {
+
     const taskInput = document.getElementById('task-input');
     const title = taskInput.value.trim();
   
@@ -41,15 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
           taskInput.value = '';
           fetchTasks();
         })
-        .catch(error => console.error('Erro ao adicionar tarefa:', error));
+        .catch(error => console.error('Erro ao adicionar tarefa: verificar', error));
     }
-  }
+
+  })
+
+
   
   function deleteTask(id) {
     fetch(`http://localhost:3000/tasks/${id}`, {
       method: 'DELETE',
     })
       .then(() => fetchTasks())
-      .catch(error => console.error('Erro ao excluir tarefa:', error));
+      .catch(error => console.error('Erro ao excluir tarefa: verificar', error));
   }
   

@@ -1,15 +1,3 @@
-<!-- Não roda o LocalHost!! Ajuda ae -->
-
-<!-- 
-    F12 mostrando erro na hora de rodar no navegador 
-
-main.js:14 Erro ao obter tarefas: TypeError: tasks.forEach is not a function
-    at displayTasks (main.js:21:11)
-    at main.js:12:9
-    
-    (index.html:18:35) 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +10,14 @@ main.js:14 Erro ao obter tarefas: TypeError: tasks.forEach is not a function
 
 <body>
 
+  
+
   <div class="container">
     <h1>Lista To-Do</h1>
     <div id="task-form">
 
       <input type="text" id="task-input" placeholder="Add new task">
-      <button onclick="addTask()">Adicionar</button>
+      <button id="add-task-button">Adicionar</button>
 
     </div>
     <ul id="task-list"></ul>
